@@ -7,8 +7,10 @@ class Solution:
     def strStr(self, source, target):
         # write your code here
         if target is None or source is None:# or len(source) < len(target):
-            return -1
-            
+            return -1 
+	# here, empty string and null are two different types of input and needs to be considered separately.
+        
+    
         for i in range(len(source) - len(target) + 1):
             if source[i:i+len(target)] == target:
                 return i
